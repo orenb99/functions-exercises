@@ -12,7 +12,15 @@ function myReverse(str) {
 function allCombinations(str) {
   let combinations = [];
   // your code here
-  
+  for (let i = 0; i < str.length; i++) {
+      let temp="";
+    for (let j = 0; j < str.length; j++) {
+      if(i<=j){
+        temp+=str.charAt(j);
+        combinations.push(temp);
+      }
+    }
+  }
   //
   return combinations;
 }
@@ -20,6 +28,10 @@ function allCombinations(str) {
 //Question 3
 function allCaps(str) {
   // your code here
+  str.A
+  for(let i=0;i<str.length;i++){
+    if()
+  }
   return "";
 }
 
