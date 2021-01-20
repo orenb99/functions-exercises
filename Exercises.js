@@ -52,14 +52,37 @@ function myPower(x, n) {
 
 //Question 5
 function getFirstNotRepeating(str) {
-  
-  return "";
+  let single=false;
+  for(let i=0;i<str.length;i++){
+    for(let j=0;j<str.length;j++){
+      if(i!==j){
+        if(str.charAt(i)===str.charAt(j)){
+          single=false;
+          break;
+        }
+        else
+          single=true;
+      }
+    }
+     if(single===true)
+       return str.charAt(i);
+    single=false;
+  }
+  return "no single characters";
 }
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
-  // your code here
-  return "I'm not interested in the bonus question :(";
+  let arr=[];
+  let sum=0;
+  for(let i=0;i<num;i++){
+    if(num%i===0)
+      arr.push(i);
+  }
+  for(let i=0;i<arr.length;i++){
+    sum+=arr[i];
+  }
+  return sum===num;
 }
 
 // *** Playground ***
