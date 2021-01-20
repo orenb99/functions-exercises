@@ -27,12 +27,18 @@ function allCombinations(str) {
 
 //Question 3
 function allCaps(str) {
+  let final="";
   // your code here
-  str.A
   for(let i=0;i<str.length;i++){
-    if()
+    if(str.charAt(i-1)===" "||i===0){
+      final+=str.charAt(i).toUpperCase();
+    }
+    else{
+      final+=str.charAt(i);
+    }
+    
   }
-  return "";
+  return final;
 }
 
 //Question 4
